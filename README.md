@@ -1,12 +1,12 @@
-# Event Recommendation & Ticket Search System
-[Link](http://13.58.22.177:8080/Jupiter/)
+# Event Recommendation & Ticket Search System[Link](http://13.58.22.177:8080/Jupiter/)
+
 
 ## Table of contents
-* [1. Project Description](#proj-des)
-* [2. Infrastructure Design](#infra)
-* [3. Java Servlet Design](#servlet)
-* [4. Database Implementation](#database)
-* [5. Design pattern](#design-pattern)
+* [1. Project Description](#1-project-descriptions)
+* [2. Infrastructure Design](#2-infrastructure-design)
+* [3. Java Servlet Design](#3-java-servlet-design)
+* [4. Database Implementation](#4-database-design)
+* [5. Design pattern](#5-design-pattern)
 
 ## 1. Project Description
 
