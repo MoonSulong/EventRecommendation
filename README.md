@@ -1,15 +1,14 @@
-# Event Recommendation & Ticket Search System[Link](http://13.58.22.177:8080/Jupiter/)
-
+# Event Recommendation & Ticket Search System
 
 ## Table of contents
 * [1. Project Description](#1-project-descriptions)
 * [2. Infrastructure Design](#2-infrastructure-design)
 * [3. Java Servlet Design](#3-java-servlet-design)
-* [4. Database Implementation](#4-database-design)
+* [4. Database Implementation](#4-database-implementation)
 * [5. Design pattern](#5-design-pattern)
 
-## 1. Project Description
-
+## 1. Project Description 
+- [Link](http://13.58.22.177:8080/Jupiter/)
 - Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. This web application supports 3 major implementations:
    * **Auto-Search** events around users based on geolocation
    * **Favorite** events when the user likes while **Unfavorite** events when user unlikes the events
@@ -18,8 +17,6 @@
    * Utilized relational and NoSQL databases (MySQL/MongoDB) to store real business data, such as name, description, location and price, from TicketMaster API
    * Design **content-based recommendation algorithm** for event recommendation
    * Deployed server to Amazon EC2 to handle 160 QPS tested by Apache JMeter 
-- The website server on `AWS` can be accessed through: [Event Recommendation System](http://13.58.22.177:8080/Jupiter/)
-
 
 ## 2. Infrastructure Design
 - 3-tier architecture
