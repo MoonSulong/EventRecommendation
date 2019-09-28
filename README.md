@@ -1,11 +1,11 @@
 # Personal Event Recommendation System & Ticket Search Engine 
 
 ## Table of contents
-* [Project Description](## 1. Project Description)
-* [Infrastructure Design](## 2. Infrastructure Design)
-* [Java Servlet Design](## 3. Java Servlet Design)
-* [Database Implementation](## 4. Database Implementation)
-* [Design pattern](## 5. Design pattern)
+* [1. Project Description](#Project-Description)
+* [2. Infrastructure Design](#Infrastructure-Design)
+* [3. Java Servlet Design](#Java-Servlet-Design)
+* [4. Database Implementation](#Database-Implementation)
+* [5. Design pattern](#Design-pattern)
 
 ## 1. Project Description
 
@@ -99,4 +99,4 @@
       * Only create specific number of instance of database, and the class can control the instance itself, and give the global access to outerclass
 
 ## Acknowledgement
-- Above figures credits to Hannah Wang
+- Above figures credit to Hannah Wang
