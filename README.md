@@ -1,19 +1,17 @@
-# Event Recommendation Systems
-
-## Business Design
-- To design a personalization based event recommendation systems for event search.
+# Personal Event Recommendation System & Ticket Search Engine 
 
 ## General Instruction
-- Design a web service with `RESTful APIs` in Java to handle HTTP requests and responses
-- Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. The Event Recommendation Website realizes three main functions:
-   * **Search** events around users
-   * **Favorite** events they like and also delete events they don’t like anymore
-   * Get **recommendation of events** around based on their favorite history and distance to where events will be hold
-- Backend: use `Java` to process logic request, and some supports are as below:
-   * Built with both relational database and NoSQL database (`MySQL` and `MongoDB`) to support data storage from users and items searched in TicketMaster API
+
+- Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. This web application supports 3 major implementations:
+   * **Auto-Search** events around users based on geolocation
+   * **Favorite** events when the user likes while **Unfavorite** events when user unlikes the events
+   * Show **recommendation of events** around based on their favorite history
+- Backend: create `Java` servlet with `RESTful APIs` in `Apache Tomcat` to handle HTTP requests and responses
+   * Utilized relational and NoSQL databases (MySQL/MongoDB) to store real business data, such as name, description, location and price, from TicketMaster API
    * Design **content-based recommendation algorithm** for event recommendation
-- Deploy website server on `Amazon EC2`: [Event Recommendation System](http://52.24.237.51/EventRecommend/)
-- Analyze website traffic both online and offline with ELK (`ElasticSearch`, `Logstash` and `Kibana`) and `MapReduce` in MongoDB
+   * Deployed server to Amazon EC2 to handle 160 QPS tested by Apache JMeter 
+- The website server on `AWS` can be accessed through: [Event Recommendation System](http://13.58.22.177:8080/Jupiter/)
+
 
 ## Infrastructure Design
 - 3-tier architecture
@@ -22,10 +20,10 @@
    * Logic tier: Java
 - Local and remote development environment
 
-![local environment](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/local.png)
+![local environment](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/local.png)
 > Local development environment
 
-![remote environment](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/remote.png)
+![remote environment](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/remote.png)
 > Remote development environment
 
 ## API Design
@@ -57,7 +55,7 @@
       * Set a new user into users table/collection in database
       * return response
 
-![APIs design](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/APIs.png)
+![APIs design](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img//APIs.png)
 > APIs design in logic tier
 
 - TicketMasterAPI
@@ -66,7 +64,7 @@
    * **Content-based Recommendation**: find categories from item profile from a user’s favorite, and recommend the similar items with same categories.
    * Present recommended items with ranking based on distance (geolocation of users)
 
-![recommendation algorithm](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/recommendation.png)
+![recommendation algorithm](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/recommendation.png)
 > Process of recommend request
 
 ## Database Design
@@ -76,7 +74,7 @@
    * **category** - store item-category relationship
    * **history** - store user favorite history
 
-![mysql](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/mysql.png)
+![mysql](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/mysql.png)
 > MySQL database design
 
 - MongoDB
@@ -94,15 +92,4 @@
    * **Singleton pattern**: `MySQLConnection.java`, `MongoDBConnection.java`
       * Only create specific number of instance of database, and the class can control the instance itself, and give the global access to outerclass
 
-## User Behavior Analysis
-- Online (**ElasticSearch**, **Logstash**, **Kibana**)
-   * Use Logstash to fetch log (in NoSQL-like form), then store data in ElasticSearch, finally use Kibana to analyze the data in ElasticSearch, getting some tables and graphs like APIs use, request status, geolocation of visitors, etc
-
-![ELK analysis](https://raw.githubusercontent.com/Wangxh329/EventRecommendation/master/img_font_icon_sources/doc/elk.png)
-> Remote development environment
-
-- Offline (**MapReduce in MongoDB**)
-   * Copy-paste some logs from Tomcat server
-   * Purify log data and store in MongoDB
-   * Do ``mapreduce()`` in MongoDB
-   * Get a list of timebucket-count in descending order of count, then find the peak time of website traffic
+## Attached figure are produced by Hannah Wang
