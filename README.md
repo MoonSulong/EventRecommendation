@@ -8,7 +8,7 @@
 * [5. Design pattern](#5-design-pattern)
 
 ## 1. Project Description 
-- [Link](http://13.58.22.177:8080/Jupiter/)
+- [Link to the web application](http://13.58.22.177:8080/Jupiter/)
 - Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. This web application supports 3 major implementations:
    * **Auto-Search** events around users based on geolocation
    * **Favorite** events when the user likes while **Unfavorite** events when user unlikes the events
