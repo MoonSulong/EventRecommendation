@@ -1,6 +1,13 @@
 # Personal Event Recommendation System & Ticket Search Engine 
 
-## General Instruction
+## Table of contents
+* [Project Description](## 1. Project Description)
+* [Infrastructure Design](## 2. Infrastructure Design)
+* [Java Servlet Design](## 3. Java Servlet Design)
+* [Database Implementation](## 4. Database Implementation)
+* [Design pattern](## 5. Design pattern)
+
+## 1. Project Description
 
 - Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. This web application supports 3 major implementations:
    * **Auto-Search** events around users based on geolocation
@@ -13,7 +20,7 @@
 - The website server on `AWS` can be accessed through: [Event Recommendation System](http://13.58.22.177:8080/Jupiter/)
 
 
-## Infrastructure Design
+## 2. Infrastructure Design
 - 3-tier architecture
    * Presentation tier: HTML, CSS, JavaScript
    * Data tier: MySQL, MongoDB
@@ -26,7 +33,7 @@
 ![remote environment](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/remote.png)
 > Remote development environment
 
-## API Design
+## 3. Java Servlet Design
 - Logic tier(Java Servlet to RPC)
    * Search
       * searchItems
@@ -67,7 +74,7 @@
 ![recommendation algorithm](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/recommendation.png)
 > Process of recommend request
 
-## Database Design
+## 4. Database Implementation
 - MySQL
    * **users** - store user information.
    * **items** - store item information.
@@ -82,8 +89,7 @@
    * **items** - store item information and item-category relationship. = (items + category)
    * **logs** – store log information
 
-## Implementation Details
-- Design pattern
+## 5. Design pattern
    * **Builder pattern**: `Item.java`
       * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
    * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
@@ -92,4 +98,5 @@
    * **Singleton pattern**: `MySQLConnection.java`, `MongoDBConnection.java`
       * Only create specific number of instance of database, and the class can control the instance itself, and give the global access to outerclass
 
-## Attached figure are produced by Hannah Wang
+## Acknowledgement
+- Above figures credits to Hannah Wang
