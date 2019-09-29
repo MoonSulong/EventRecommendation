@@ -1,4 +1,5 @@
 # Event Recommendation & Ticket Search System
+- Designed and maintained an interactive web page for clients to search events and purchase tickets
 
 ## Table of contents
 * [1. Project Description](#1-project-descriptions)
