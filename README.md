@@ -1,5 +1,6 @@
 # Event Recommendation & Ticket Search System
 - Designed and maintained an interactive web page for clients to search events and purchase tickets
+![demo](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/demo.gif)
 
 ## Table of contents
 * [1. Project Description](#1-project-descriptions)
@@ -10,9 +11,6 @@
 
 ## 1. Project Description 
 - [Link to the web application](http://13.58.22.177:8080/Jupiter/)
-
-![demo](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/demo.gif)
-
 - Frontend: an interactive web page with `AJAX` technology implemented with `HTML`, `CSS` and `JavaScript`. This web application supports 3 major implementations:
    * **Auto-Search** events around users based on geolocation
    * **Favorite** events when the user likes while **Unfavorite** events when user unlikes the events
