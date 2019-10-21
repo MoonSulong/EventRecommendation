@@ -1,6 +1,6 @@
 # Event Recommendation & Ticket Search System
 - Designed and maintained an interactive web page for clients to search events and purchase tickets
-![demo](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/demo.gif)
+![demo](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/web.gif)
 
 ## Table of contents
 * [1. Project Description](#1-project-descriptions)
